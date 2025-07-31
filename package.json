@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postinstall": "chmod +x node_modules/.bin/vite || true",
+    "postinstall": "echo 'Skipping chmod for Vercel'",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "node server/index.js",
-    "vercel-build": "npm install && npm run build",
+    "vercel-build": "npm install --force && npm run build",
     "dev:full": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
